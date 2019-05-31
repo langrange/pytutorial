@@ -22,7 +22,7 @@ These materials are referenced from [https://woaielf.github.io](https://woaielf.
 ![String](字符串.png)
 
 ## List Element
-![List Element](列表元素.png)
+![List Element](列表元组.png)
 
 ## Dictionary Set
 ![Dictionary Set](字典集合.png)
