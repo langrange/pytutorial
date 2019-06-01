@@ -21,5 +21,24 @@ Basic Style [Lower Limit: Upper Limit: Step Size]
 `print(s1[2:0:-1])`  
 (The Upper limit itself is not included.)
 
+## Strings are tuples
 
+## Operation
+`print 'a' in ['a','b']`
+
+## Indent
+```
+a=2  
+b=1  
+if a>b:
+   print a+b
+else:
+   print a-b  
+```
+## Loop
+range()  
+for element in sequence  
+while conditon:  
+continue  
+break  
 
