@@ -1,7 +1,8 @@
 # pytutorial
 Tutorial for python learning
 
-These materials are referenced from [https://woaielf.github.io](https://woaielf.github.io).
+These materials are referenced from [https://woaielf.github.io](https://woaielf.github.io).[https://www.cnblogs.com/vamei](https://www.cnblogs.com/vamei).
+
 
 ## Overview of article structure
 ![Overview of article structure](文章结构概览.png)
