@@ -10,82 +10,82 @@ There are two kinds of sequences: tuple and list.
 
 ```
 s1=(2,1.3,'love')
-	s2=[True,5,'smile']
-	print(s1,type(s1))
+s2=[True,5,'smile']
+print(s1,type(s1))
 print(s2,type(s2))
-	```
+```
 ## Index of elements
-	Subscripts for sequence elements start at 0  
-	`print(s1[0])`  
-	Basic Style [Lower Limit: Upper Limit: Step Size]  
-	`print(s1[2:0:-1])`  
+Subscripts for sequence elements start at 0  
+`print(s1[0])`  
+Basic Style [Lower Limit: Upper Limit: Step Size]  
+`print(s1[2:0:-1])`  
 (The Upper limit itself is not included.)
 
 ## Strings are tuples
 
 ## Operation
-	`print 'a' in ['a','b']`
+`print 'a' in ['a','b']`
 
 ## Indent
-	```
-	a=2  
-	b=1  
-	if a>b:
-	print a+b
-	else:
-	print a-b  
-	```
+```
+a=2  
+b=1  
+if a>b:
+print a+b
+else:
+print a-b  
+```
 ## Loop
 range()  
-	for element in sequence  
-	while conditon:  
-	continue  
-	break  
+for element in sequence  
+while conditon:  
+continue  
+break  
 
 ## Function Define
-	```
-	a=1
-	def change_integer(a):
-		a +=1
-	return a
-	 print change_integer(a)
-	 print a
+```
+a=1
+def change_integer(a):
+a +=1
+return a
+ print change_integer(a)
+ print a
 
 #===
-	 b =[1,2,3]
+ b =[1,2,3]
 
-	 def change_list(b):
-		 b[0] +=1
-	return b
-	  print change_list(b)
-	  print b
-	  ```
-	  In the first example, we pass an integer variable to a function, which operates on it, but the original integer variable a does not change.
-	In the second example, we pass a table to a function, which operates, and the original table B changes.
-	  For variables of basic data type, when variables are passed to the function, the function replicates a new variable in memory without affecting the original variable. (We call this value transfer)
-	  But for a table, the table passes a pointer to the function, pointer points to the position of the sequence in memory, the operation of the table in the function will be carried out in the original memory, thus affecting the original variables. We call this pointer passing.
+ def change_list(b):
+ b[0] +=1
+return b
+  print change_list(b)
+  print b
+  ```
+  In the first example, we pass an integer variable to a function, which operates on it, but the original integer variable a does not change.
+In the second example, we pass a table to a function, which operates, and the original table B changes.
+For variables of basic data type, when variables are passed to the function, the function replicates a new variable in memory without affecting the original variable. (We call this value transfer)
+But for a table, the table passes a pointer to the function, pointer points to the position of the sequence in memory, the operation of the table in the function will be carried out in the original memory, thus affecting the original variables. We call this pointer passing.
 
 ## Object-oriented programming
-	  Python uses class and object to perform object-oriented programming (OOP) programming.
-	  ```
-	  class Bird(object):
-		  have_feather= True
-		  way_of_reproduction = 'egg'
-		  ```
-		  References to *attributes* are implemented as objects.attribute,like 
-	```
-	   summer = Bird()
-	   summer.way_of_reproduction
-	   ```
+Python uses class and object to perform object-oriented programming (OOP) programming.
+```
+class Bird(object):
+	have_feather= True
+	way_of_reproduction = 'egg'
+```
+  References to *attributes* are implemented as objects.attribute,like 
+```
+summer = Bird()
+summer.way_of_reproduction
+```
 ## Object-objects programming 2nd
-	   __init__() is a special method,Python has some special methods. Python treats them specially. The special method is characterized by two underscores before and after the name 
-	   If you define the __init__() method in your class, Python will automatically call this method when you create the object. This process is also called initialization.
-	   ```
-	   class happyBird(Bird):
-		   def __init__(self,more_words):
-			   print 'We are happy birds.',more_words 
-			   summer = happyBird('Happy,Happy!')
-			   ```
+__init__() is a special method,Python has some special methods. Python treats them specially. The special method is characterized by two underscores before and after the name 
+If you define the __init__() method in your class, Python will automatically call this method when you create the object. This process is also called initialization.
+```
+class happyBird(Bird):
+   def __init__(self,more_words):
+   print 'We are happy birds.',more_words 
+   summer = happyBird('Happy,Happy!')
+```
 
 ## dictionary
 
