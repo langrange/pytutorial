@@ -42,3 +42,25 @@ while conditon:
 continue  
 break  
 
+## Function Define
+```
+a=1
+def change_integer(a):
+    a +=1
+    return a
+print change_integer(a)
+print a
+
+#===
+b =[1,2,3]
+
+def change_list(b):
+	b[0] +=1
+	return b
+print change_list(b)
+print b
+```
+In the first example, we pass an integer variable to a function, which operates on it, but the original integer variable a does not change.
+In the second example, we pass a table to a function, which operates, and the original table B changes.
+For variables of basic data type, when variables are passed to the function, the function replicates a new variable in memory without affecting the original variable. (We call this value transfer)
+	But for a table, the table passes a pointer to the function, pointer points to the position of the sequence in memory, the operation of the table in the function will be carried out in the original memory, thus affecting the original variables. We call this pointer passing.
