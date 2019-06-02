@@ -98,15 +98,47 @@ print dic['sam']
 ```
 ## There are other ways to introduce in Python
 ```
-import a as b # import module a, and rename it as b
-from a import function1 # import function1 from module a, and it is not needed to explain the module when we use the objcet **function1**,**function1** is okay,not the**a.function1**.
-from a import *  # import all the objects from module a.
+import a as b
+# import module a, and rename it as b
+from a import function1 
+# import function1 from module a, and it is not needed to explain the module when we use the objcet **function1**,**function1** is okay,not the**a.function1**.
+from a import *
+# import all the objects from module a.
 ```
 ## Search path
 1. the folder wherer the program is located
 2. standard library installation path
-3. path included in the operating system environment variable PYTHONPATH
+3. path included in the operating system environment variable PYTHONPATH  
 If you have a custom module, or a downloaded module, you can place it in the appropriate path so that Python can find it.
 ```
-import this_dir.module # a *__init__.py* must be in the directory *this_dir*,*__init__* can be an empty file.
+import this_dir.module 
+# a *__init__.py* must be in the directory *this_dir*,*__init__* can be an empty file.
+```
+## Exception handling
+```
+re = iter(range(5))
+try:
+	for i in range(100):
+		   	print re.next()
+except StopIteration:
+	   	print 'here is end '
+	   	print 'HaHaHaHa'
+else:
+		print 'go straight'
+```
+## Module using
+```
+from mod1 import function2
+
+try:
+	function2()
+	function1()
+except NameError:
+	print 'NameError! Cannot use function1() without import it'
+else:
+   	print "Use function1() straightly" 
+
+import mod1
+print 'After import module mode1: '
+mod1.function1()
 ```

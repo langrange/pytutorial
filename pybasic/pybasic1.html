@@ -24,9 +24,9 @@ Basic Style [Lower Limit: Upper Limit: Step Size]<br />
 <pre><code>a=2  
 b=1  
 if a&gt;b:
-   print a+b
+print a+b
 else:
-   print a-b  
+print a-b  
 </code></pre>
 
 <h2>Loop</h2>
@@ -40,6 +40,7 @@ break  </p>
 def change_integer(a):
     a +=1
     return a
+
 print change_integer(a)
 print a
 
@@ -51,6 +52,7 @@ def change_list(b):
     return b
 print change_list(b)
 print b
+
 </code></pre>
 
 <p>In the first example, we pass an integer variable to a function, which operates on it, but the original integer variable a does not change.
@@ -64,4 +66,42 @@ But for a table, the table passes a pointer to the function, pointer points to t
     way_of_reproduction = 'egg'
 </code></pre>
 
-<p>References to <em>attributes</em> are implemented as objects.attribute.  </p>
+<p>References to <em>attributes</em> are implemented as objects.attribute,like </p>
+<pre><code>summer = Bird()
+summer.way_of_reproduction
+</code></pre>
+
+<h2>Object-objects programming 2nd</h2>
+<p><strong>init</strong>() is a special method,Python has some special methods. Python treats them specially. The special method is characterized by two underscores before and after the name 
+If you define the <strong>init</strong>() method in your class, Python will automatically call this method when you create the object. This process is also called initialization.</p>
+<pre><code>class happyBird(Bird):
+   def __init__(self,more_words):
+   print 'We are happy birds.',more_words 
+   summer = happyBird('Happy,Happy!')
+</code></pre>
+
+<h2>dictionary</h2>
+<p>The elements of the dictionary are not in order. You cannot reference an element by subscript. The dictionary is referenced by a key.</p>
+<pre><code>dic = {'tom':11, 'sam':57,'lily':100}
+print dic['sam']
+</code></pre>
+
+<h2>There are other ways to introduce in Python</h2>
+<pre><code>import a as b
+# import module a, and rename it as b
+from a import function1 
+# import function1 from module a, and it is not needed to explain the module when we use the objcet **function1**,**function1** is okay,not the**a.function1**.
+from a import *
+# import all the objects from module a.
+</code></pre>
+
+<h2>Search path</h2>
+<ol>
+<li pref="">the folder wherer the program is located</li>
+<li pref="">standard library installation path</li>
+<li pref="">path included in the operating system environment variable PYTHONPATH<br />
+If you have a custom module, or a downloaded module, you can place it in the appropriate path so that Python can find it.</li>
+</ol>
+<pre><code>import this_dir.module 
+# a *__init__.py* must be in the directory *this_dir*,*__init__* can be an empty file.
+</code></pre>
