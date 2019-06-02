@@ -105,3 +105,32 @@ If you have a custom module, or a downloaded module, you can place it in the app
 <pre><code>import this_dir.module 
 # a *__init__.py* must be in the directory *this_dir*,*__init__* can be an empty file.
 </code></pre>
+
+<h2>Exception handling</h2>
+<p>Reference from <a href="https://www.cnblogs.com/vamei/archive/2012/07/10/2582787.html">https://www.cnblogs.com/vamei/archive/2012/07/10/2582787.html</a></p>
+<pre><code>re = iter(range(5))
+try:
+    for i in range(100):
+            print re.next()
+except StopIteration:
+        print 'here is end '
+        print 'HaHaHaHa'
+else:
+        print 'go straight'
+</code></pre>
+
+<h2>Module using</h2>
+<pre><code>from mod1 import function2
+
+try:
+    function2()
+    function1()
+except NameError:
+    print 'NameError! Cannot use function1() without import it'
+else:
+    print &quot;Use function1() straightly&quot; 
+
+import mod1
+print 'After import module mode1: '
+mod1.function1()
+</code></pre>

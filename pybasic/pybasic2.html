@@ -1,0 +1,59 @@
+<h2>Function parameter passing</h2>
+<h3>position passing</h3>
+<pre><code>def f(a,b,c):
+    return a+b+c
+print f(1,2,3)          
+</code></pre>
+
+<h3>keyword passing</h3>
+<pre><code>def f(a,b,c):
+    return a+b+c
+print f(c=3,b=2,a=1)            
+</code></pre>
+
+<p>Keyword delivery can be mixed with location delivery<br />
+<em>But the positional parameter will appear before the keyword argument</em>      </p>
+<pre><code>print f(1,c=3,b=2)      
+</code></pre>
+
+<h3>default value of parameter</h3>
+<pre><code>def f(a,b,c=10):
+    return a+b+c
+
+print f(3,2)
+print f(3,2,1)
+</code></pre>
+
+<h3>packing passing</h3>
+<p>When defining a function, we sometimes don't know how many parameters are passed when the call is made. At this time, it is useful to pack the positional parameters, or to wrap the keyword parameters for parameter passing.
+ packing position passing</p>
+<pre><code>def func(*name):
+    print type(name)
+    print name
+func(1,4,6)
+func(5,6,7,1,2,3)
+</code></pre>
+
+<p>packing keyword passing</p>
+<pre><code>def func(**dict):
+    print type(dict)
+    print dict 
+func(a=1,b=9)
+func(m=2,n=1,c=11)
+</code></pre>
+
+<h3>unpacking passing</h3>
+<p>unpacking tuple</p>
+<pre><code>def func(a,b,c):
+    print a,b,c
+arg = (1,3,4)
+func(*args)
+</code></pre>
+
+<p>unpacking dictionary</p>
+<pre><code>dict = {'a':1,'b':2,'c':3}
+func(**dict)
+</code></pre>
+
+<h3>mixed</h3>
+<p><strong>order:</strong> position passing --&gt; keyword passing --&gt; packing position --&gt; packing keyword passing</p>
