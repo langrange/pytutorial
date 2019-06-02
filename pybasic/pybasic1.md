@@ -90,4 +90,23 @@ class happyBird(Bird):
 ```
 
 ## dictionary
+The elements of the dictionary are not in order. You cannot reference an element by subscript. The dictionary is referenced by a key.
 
+```
+dic = {'tom':11, 'sam':57,'lily':100}
+print dic['sam']
+```
+## There are other ways to introduce in Python
+```
+import a as b # import module a, and rename it as b
+from a import function1 # import function1 from module a, and it is not needed to explain the module when we use the objcet **function1**,**function1** is okay,not the**a.function1**.
+from a import *  # import all the objects from module a.
+```
+## Search path
+1. the folder wherer the program is located
+2. standard library installation path
+3. path included in the operating system environment variable PYTHONPATH
+If you have a custom module, or a downloaded module, you can place it in the appropriate path so that Python can find it.
+```
+import this_dir.module # a *__init__.py* must be in the directory *this_dir*,*__init__* can be an empty file.
+```
