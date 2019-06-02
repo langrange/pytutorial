@@ -115,6 +115,7 @@ import this_dir.module
 # a *__init__.py* must be in the directory *this_dir*,*__init__* can be an empty file.
 ```
 ## Exception handling
+Reference from [https://www.cnblogs.com/vamei/archive/2012/07/10/2582787.html](https://www.cnblogs.com/vamei/archive/2012/07/10/2582787.html)
 ```
 re = iter(range(5))
 try:
